@@ -1,0 +1,37 @@
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+
+    color: #fff;
+    padding: 15px;
+
+    // border: 2px solid black;
+    .logo {
+        display: flex;
+        align-items: center;
+        i {
+            border: 2px solid;
+            padding: 5px;
+            border-radius: 100%;
+            margin-right: 4px;
+        }
+        .logo-text {
+            font-size: 1.7rem;
+            font-family: Monomaniac One, sans-serif;
+        }
+    }
+    .current-city-display {
+        text-align: center;
+        font-family: Libre Franklin, sans-serif;
+        font-size: 1.2rem;
+        
+        background: #748e93;
+
+        width: fit-content;
+        margin: 0 auto;
+        padding: 5px 7px;
+        border-radius: 5px;
+    }
+   
+}
