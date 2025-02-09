@@ -26,7 +26,100 @@ const Home = ({ userCity, setUserCity }) => {
 
   if (isLoading) return <div>Loading...</div>;
 
-  console.log(data?.current);
+  // console.log(data?.current);
+
+  // Continent Arrays
+  // North America
+  const northAmericaCitiesArray = arrayOfPopularCities.filter(
+    (item) => item.continent === "North America"
+  );
+
+  const sortedNorthAmericaCitiesArray = northAmericaCitiesArray.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // South America
+  const southAmericaCitiesArray = arrayOfPopularCities.filter(
+    (item) => item.continent === "South America"
+  );
+
+  const sortedSouthAmericaCitiesArray = southAmericaCitiesArray.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // Europe
+  const europeCitiesArray = arrayOfPopularCities.filter(
+    (item) => item.continent === "Europe"
+  );
+
+  const sortedEuropeCitiesArray = europeCitiesArray.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // Asia
+  const asiaCitiesArray = arrayOfPopularCities.filter(
+    (item) => item.continent === "Asia"
+  );
+
+  const sortedAsiaCitiesArray = asiaCitiesArray.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // Australia / Oceania
+  const australiaOceaniaCitiesArray = arrayOfPopularCities.filter(
+    (item) => item.continent === "Australia/Oceania"
+  );
+
+  const sortedAustraliaOceaniaCitiesArray = australiaOceaniaCitiesArray.sort(
+    (a, b) => {
+      if (a.name < b.name) {
+        return -1;
+      }
+      if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    }
+  );
+
+  // Africa
+  const africaCitiesArray = arrayOfPopularCities.filter(
+    (item) => item.continent === "Africa"
+  );
+
+  const sortedAfricaOceaniaCitiesArray = africaCitiesArray.sort((a, b) => {
+    if (a.name < b.name) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    return 0;
+  });
 
   return (
     <div className="home-container">
@@ -38,68 +131,85 @@ const Home = ({ userCity, setUserCity }) => {
         <div className="home-city-cards-location-container north-america">
           <h6 className="location-title">North America</h6>
           <div className="location-cards">
-            {arrayOfPopularCities.map(
-              (item) =>
-                item.continent === "North America" && (
-                  <HomeCityCard setUserCity={setUserCity} item={item} />
-                )
-            )}
+            {sortedNorthAmericaCitiesArray
+              .map((item) => (
+                <HomeCityCard
+                  key={item.id}
+                  setUserCity={setUserCity}
+                  item={item}
+                />
+              ))
+              .sort((a, b) => {
+                // console.log(a, b);
+                if (a.name < b.name) {
+                  return -1;
+                }
+                if (a.name > b.name) {
+                  return 1;
+                }
+                return 0;
+              })}
           </div>
         </div>
         <div className="home-city-cards-location-container south-america">
           <h6 className="location-title">South America</h6>
           <div className="location-cards">
-            {arrayOfPopularCities.map(
-              (item) =>
-                item.continent === "South America" && (
-                  <HomeCityCard setUserCity={setUserCity} item={item} />
-                )
-            )}
+            {sortedSouthAmericaCitiesArray.map((item) => (
+              <HomeCityCard
+                key={item.id}
+                setUserCity={setUserCity}
+                item={item}
+              />
+            ))}
           </div>
         </div>
         <div className="home-city-cards-location-container europe">
           <h6 className="location-title">Europe</h6>
           <div className="location-cards">
-            {arrayOfPopularCities.map(
-              (item) =>
-                item.continent === "Europe" && (
-                  <HomeCityCard setUserCity={setUserCity} item={item} />
-                )
-            )}
+            {sortedEuropeCitiesArray.map((item) => (
+              <HomeCityCard
+                key={item.id}
+                setUserCity={setUserCity}
+                item={item}
+              />
+            ))}
           </div>
         </div>
 
         <div className="home-city-cards-location-container asia">
           <h6 className="location-title">Asia</h6>
           <div className="location-cards">
-            {arrayOfPopularCities.map(
-              (item) =>
-                item.continent === "Asia" && (
-                  <HomeCityCard setUserCity={setUserCity} item={item} />
-                )
-            )}
+            {sortedAsiaCitiesArray.map((item) => (
+              <HomeCityCard
+                key={item.id}
+                setUserCity={setUserCity}
+                item={item}
+              />
+            ))}
           </div>
         </div>
         <div className="home-city-cards-location-container australia-oceania">
           <h6 className="location-title">Australia / Oceania</h6>
           <div className="location-cards">
-            {arrayOfPopularCities.map(
-              (item) =>
-                item.continent === "Australia/Oceania" && (
-                  <HomeCityCard setUserCity={setUserCity} item={item} />
-                )
-            )}
+            {sortedAustraliaOceaniaCitiesArray.map((item) => (
+              <HomeCityCard
+                key={item.id}
+                setUserCity={setUserCity}
+                item={item}
+              />
+            ))}
           </div>
         </div>
         <div className="home-city-cards-location-container africa">
           <h6 className="location-title">Africa</h6>
           <div className="location-cards">
-            {arrayOfPopularCities.map(
-              (item) =>
-                item.continent === "Africa" && (
-                  <HomeCityCard setUserCity={setUserCity} item={item} />
-                )
-            )}
+            {sortedAfricaOceaniaCitiesArray.map((item) => (
+              <HomeCityCard
+                key={item.id}
+                setUserCity={setUserCity}
+                item={item}
+              />
+            ))}
           </div>
         </div>
       </div>

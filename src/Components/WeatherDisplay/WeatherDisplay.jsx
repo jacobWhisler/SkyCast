@@ -3,7 +3,7 @@ import "./WeatherDisplay.scss";
 
 const WeatherDisplay = ({ data, userCity }) => {
   const cityWeatherData = JSON.stringify(data);
-  console.log(cityWeatherData);
+  // console.log(cityWeatherData);
 
   return (
     <div className="weather-display-container p-20">

@@ -3,6 +3,7 @@ import Cleveland from "./assets/img/Cleveland.png"
 import NYC from "./assets/img/NYC.png"
 import LosAngeles from "./assets/img/Los Angeles.png"
 import Toronto from "./assets/img/Toronto.png"
+import Anchorage from "./assets/img/Anchorage.png"
 
 // South America Bg Image Imports
 import RiodeJanerio from "./assets/img/Rio de Janeiro.png"
@@ -14,12 +15,14 @@ import Paris from "./assets/img/Paris.png"
 import London from "./assets/img/London.png"
 import Milan from "./assets/img/Milan.png"
 import Rome from "./assets/img/Rome.png"
+import Barcelona from "./assets/img/Barcelona.png"
 
 // Asia Bg Image Imports
 import Tokyo from "./assets/img/Tokyo.png"
 import Bangkok from "./assets/img/Bangkok.png"
 import Jakarta from "./assets/img/Jakarta.png"
 import Dubai from "./assets/img/Dubai.png"
+import Manila from "./assets/img/Manila.png"
 
 // Australia/Oceania Bg Image Imports
 import Sydney from "./assets/img/Sydney.png"
@@ -27,8 +30,9 @@ import Auckland from "./assets/img/Auckland.png"
 import Melbourne from "./assets/img/Melbourne.png"
 
 // Africa Bg Image Imports
-import Johannesburg from "./assets/img/Johannesburg.png";
+import Johannesburg from "./assets/img/Johannesburg.png"
 import Casablanca from "./assets/img/Casablanca.png"
+import Cairo from "./assets/img/Cairo.png"
 
 
 
@@ -154,6 +158,30 @@ const arrayOfPopularCities = [
         name: "Melbourne",
         continent: "Australia/Oceania",
         background: Melbourne
+    },
+    {
+        id: 21,
+        name: "Barcelona",
+        continent: "Europe",
+        background: Barcelona
+    },
+    {
+        id: 22,
+        name: "Manila",
+        continent: "Asia",
+        background: Manila
+    },
+    {
+        id: 23,
+        name: "Cairo",
+        continent: "Africa",
+        background: Cairo
+    },
+    {
+        id: 24,
+        name: "Anchorage",
+        continent: "North America",
+        background: Anchorage
     },
 ]
 
