@@ -1,0 +1,134 @@
+.weather-display-container {
+    background: #748e93;
+
+    border-radius: 10px 10px 0 0;
+
+    font-family: Libre Franklin, sans-serif;
+    color: #fff;
+    .weather-display-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        .left {
+            // color: #040607;
+            .city-region {
+                font-size: 1.5rem;
+                margin-bottom: -3px;
+            }
+            .country {
+                opacity: 0.8;
+                font-size: 1.1rem;
+                letter-spacing: .3px;
+                font-weight: 500;
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            span {
+                margin: 0 3px;
+            }
+            .temp {
+                background: #274147;
+                padding: 7px;
+                width: fit-content;
+                border-radius: 7px;
+                font-size: 1.1rem;
+            }
+           
+        }
+    }
+    .more-details-container {
+        .weather-conditions-container {
+            background: #274147;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            .weather-conditions-header {
+                font-size: 1rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+
+                margin-bottom: 10px;
+                span {
+                    border: 1px solid #748e93;
+                    border-radius: 50px;
+                    width: 30px;
+                    margin-right: 5px;
+                }
+                
+            }
+            .current-conditions {
+                font-size: 1.3rem;
+                font-weight: 700;
+
+                display: flex;
+                align-items: center;
+
+                // border: 1px solid;
+                img {
+                    margin-left: 10px;
+                    margin-top: -6px;
+                }
+            }
+        }
+        .temp-details-container {
+            .temp-details-header {
+                font-size: 1rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                span {
+                    border: 1px solid #274147;
+                    border-radius: 50px;
+                    width: 30px;
+                    margin-right: 5px;
+                }
+            }
+            .temp-details-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                align-items: center;
+                .temp-details-info-item {
+                    background: #274147;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    width: 100%;
+                    .temp-details-info-item-header {
+                        font-size: 1rem;
+                        opacity: 0.7;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                    }
+                    .temp-details-info-item-content {
+                        span {
+                            margin: 0 5px;;
+                        }
+                    }
+                    &.current-temp {
+                        .temp-details-info-item-content {
+                            font-size: 2.62rem;
+                            font-weight: 700;
+                        }
+                    }
+                    &.feels-like {
+                        margin-bottom: 10px;
+                    }
+                    &.feels-like,
+                    &.wind-chill {
+                        .temp-details-info-item-content {
+                            font-size: 1.2rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

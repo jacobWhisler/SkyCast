@@ -1,0 +1,21 @@
+.home-container {
+    .home-intro-text {
+        color: #fff;
+        font-family: Libre Franklin, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        .company {
+            font-family: Monomaniac One, sans-serif;
+            font-style: italic;
+        }
+    }
+    .home-city-cards-container {
+        display: flex;
+        gap: 5px;
+        white-space: nowrap;
+        overflow-x: scroll;
+        scrollbar-width: none;
+
+        // padding: 10px 0;
+    }
+}

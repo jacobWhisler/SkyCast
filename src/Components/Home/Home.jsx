@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import "./Home.scss";
 import { useQuery } from "@tanstack/react-query";
+
+import HomeCityCard from "../HomeCityCard/HomeCityCard";
+import WeatherDisplay from "../WeatherDisplay/WeatherDisplay";
+
+import arrayOfPopularCities from "../../cities";
+import "./Home.scss";
 
 const weatherApiKey = import.meta.env.VITE_WEATHER_KEY;
 
-const Home = () => {
-  const [userCity, setUserCity] = useState();
-
+const Home = ({ userCity, setUserCity }) => {
   const fetchCurrentWeather = async (userCity) => {
     const res = await fetch(
       `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${userCity}&aqi=no`
@@ -26,11 +29,17 @@ const Home = () => {
   console.log(data?.current);
 
   return (
-    <div>
-      {userCity ? JSON.stringify(data) : "Please choose a city"}
-      <button onClick={() => setUserCity("Cleveland")}>Cleveland</button>
-      <button onClick={() => setUserCity("Zurich")}>Zurich</button>
-      <button onClick={() => setUserCity("Milan")}>Milan</button>
+    <div className="home-container">
+      <div className="home-intro-text pb-20">
+        Welcome to <span className="company">SkyCast!</span> Choose a city below
+        to get the current weather there!
+      </div>
+      <div className="home-city-cards-container p-20">
+        {arrayOfPopularCities.map((item) => (
+          <HomeCityCard item={item} setUserCity={setUserCity} />
+        ))}
+      </div>
+      <WeatherDisplay data={data} userCity={userCity} />
     </div>
   );
 };
