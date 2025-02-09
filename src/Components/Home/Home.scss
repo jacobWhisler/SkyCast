@@ -11,11 +11,25 @@
     }
     .home-city-cards-container {
         display: flex;
-        gap: 5px;
         white-space: nowrap;
         overflow-x: scroll;
         scrollbar-width: none;
-
-        // padding: 10px 0;
+        .home-city-cards-location-container {
+            margin-right: 9px;
+            .location-title {
+                font-family: Libre Franklin, sans-serif;
+                font-size: 0.8rem;
+                color: #fff;
+                margin-bottom: 2px;
+                letter-spacing: 1px;
+                opacity: 0.7;
+                margin-bottom: 5px;
+            }
+            .location-cards {
+                display: flex;
+                gap: 7px;
+            }
+        }
+        
     }
 }

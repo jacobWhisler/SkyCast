@@ -81,7 +81,7 @@ const WeatherDisplay = ({ data, userCity }) => {
             </div>
             <div className="extended-weather-details-container">
               <h6 className="extended-weather-details-header more-details-header">
-                <span></span>More details...
+                <span></span>More Details
               </h6>
               <div className="extended-weather-details-items">
                 <div className="extended-weather-details-item wind-speed">
