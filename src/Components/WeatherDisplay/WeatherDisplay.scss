@@ -76,6 +76,7 @@
             }
         }
         .temp-details-container {
+            margin-bottom: 20px;
             .temp-details-header {
                 font-size: 1rem;
                 font-weight: 500;
@@ -125,6 +126,45 @@
                         .temp-details-info-item-content {
                             font-size: 1.2rem;
                             font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+        .extended-weather-details-container {
+            .extended-weather-details-header {
+                font-size: 1rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                span {
+                    border: 1px solid #274147;
+                    border-radius: 50px;
+                    width: 30px;
+                    margin-right: 5px;
+                }
+            }
+            .extended-weather-details-items {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 10px;
+                .extended-weather-details-item {
+                    background: #274147;
+                    padding: 10px;
+                    border-radius: 10px;
+                    flex-grow: 1;
+                    .extended-weather-details-item-header {
+                        font-size: 0.8rem;
+                        opacity: 0.7;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                    }
+                    .extended-weather-details-item-content {
+                        font-size: 1.1rem;
+                        font-weight: 700;
+                        span {
+                            margin: 0 3px;
                         }
                     }
                 }

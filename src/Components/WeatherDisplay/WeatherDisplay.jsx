@@ -42,7 +42,7 @@ const WeatherDisplay = ({ data, userCity }) => {
                 <div className="left">
                   <div className="current-temp temp-details-info-item">
                     <h6 className="temp-details-info-item-header">
-                      Current temp
+                      Current Temp
                     </h6>
                     <p className="temp-details-info-item-content">
                       {Math.round(data.current.temp_f)}&#176;f
@@ -55,7 +55,7 @@ const WeatherDisplay = ({ data, userCity }) => {
                 <div className="right">
                   <div className="feels-like temp-details-info-item">
                     <h6 className="temp-details-info-item-header">
-                      Feels like
+                      Feels Like
                     </h6>
                     <p className="temp-details-info-item-content">
                       {Math.round(data.current.feelslike_f)}&#176;f
@@ -65,7 +65,7 @@ const WeatherDisplay = ({ data, userCity }) => {
                   </div>
                   <div className="wind-chill temp-details-info-item">
                     <h6 className="temp-details-info-item-header">
-                      Wind chill
+                      Wind Chill
                     </h6>
                     <p className="temp-details-info-item-content">
                       {Math.round(data.current.windchill_f)}&#176;f
@@ -73,6 +73,47 @@ const WeatherDisplay = ({ data, userCity }) => {
                       {Math.round(data.current.windchill_c)}&#176;c
                     </p>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className="extended-weather-details-container">
+              <h6 className="extended-weather-details-header more-details-header">
+                <span></span>More details...
+              </h6>
+              <div className="extended-weather-details-items">
+                <div className="extended-weather-details-item wind-speed">
+                  <h6 className="extended-weather-details-item-header">
+                    Wind Speed
+                  </h6>
+                  <p className="extended-weather-details-item-content">
+                    {Math.round(data.current.wind_mph)} mph
+                    <span>/</span>
+                    {Math.round(data.current.wind_kph)} kph
+                  </p>
+                </div>
+                <div className="extended-weather-details-item wind-direction">
+                  <h6 className="extended-weather-details-item-header">
+                    Direction
+                  </h6>
+                  <p className="extended-weather-details-item-content">
+                    {data.current.wind_dir}
+                  </p>
+                </div>
+                <div className="extended-weather-details-item humidity">
+                  <h6 className="extended-weather-details-item-header">
+                    Humidity
+                  </h6>
+                  <p className="extended-weather-details-item-content">
+                    {data.current.humidity} %
+                  </p>
+                </div>
+                <div className="extended-weather-details-item uv-index">
+                  <h6 className="extended-weather-details-item-header">
+                    UV Index
+                  </h6>
+                  <p className="extended-weather-details-item-content">
+                    {data.current.uv}
+                  </p>
                 </div>
               </div>
             </div>
