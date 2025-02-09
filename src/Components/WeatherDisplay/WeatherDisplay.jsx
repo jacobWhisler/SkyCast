@@ -123,7 +123,10 @@ const WeatherDisplay = ({ data, userCity }) => {
           </div>
         </>
       ) : (
-        <p>Please choose a city from the list above</p>
+        <p className="please-choose-a-city-message">
+          Please choose from one of the cities above to see that city's current
+          weather conditions.
+        </p>
       )}
     </div>
   );

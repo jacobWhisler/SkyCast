@@ -9,6 +9,7 @@ const HomeCityCard = ({ setUserCity, item }) => {
       onClick={() => setUserCity(item.name)}
     >
       <h6 className="name">{item.name}</h6>
+      <p className="country">{item.country}</p>
     </button>
   );
 };

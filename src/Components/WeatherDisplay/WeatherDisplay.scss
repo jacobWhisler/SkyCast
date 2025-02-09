@@ -5,6 +5,8 @@
 
     font-family: Libre Franklin, sans-serif;
     color: #fff;
+
+    min-height: 463px;
     .weather-display-header {
         display: flex;
         justify-content: space-between;
@@ -175,5 +177,9 @@
                 }
             }
         }
+    }
+    .please-choose-a-city-message {
+        font-size: 1.3rem;
+        font-weight: 700;
     }
 }

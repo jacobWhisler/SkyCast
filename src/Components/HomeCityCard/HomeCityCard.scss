@@ -1,19 +1,26 @@
 .home-city-card {
-    min-width: 160px;
-    min-height: 100px;
+    min-width: 190px;
+    min-height: 120px;
     border: none;
     border-radius: 7px;
 
     background-size: cover;
     background-color: #274147;
 
-    font-family: Libre Franklin, sans-serif;
+    font-family: Monomaniac One, sans-serif;
 
     cursor: pointer;
     .name {
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         letter-spacing: 1px;
         text-shadow: 0 0 10px rgb(0,0,0);
+        margin-bottom: -7px;
+    }
+    .country {
+        color: #fff;
+        // opacity: 0.8;
+        text-shadow: 0 0 10px rgb(0,0,0);
+        font-size: 1rem;
     }
 }
