@@ -12,7 +12,10 @@ const WeatherDisplay = ({ data, userCity }) => {
           <div className="weather-display-header">
             <div className="left">
               <h3 className="city-region">
-                {data.location.name}, {data.location.region}
+                {data.location.name}
+                {data.location.country === "United States of America"
+                  ? `, ${data.location.region}`
+                  : ""}
               </h3>
               <h4 className="country">{data.location.country}</h4>
             </div>
