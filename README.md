@@ -1,3 +1,5 @@
+A weather app to pull the current weather data of about 70 cities around the world.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
