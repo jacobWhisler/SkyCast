@@ -12,7 +12,7 @@ const weatherApiKey = import.meta.env.VITE_WEATHER_KEY;
 const Home = ({ userCity, setUserCity }) => {
   const fetchCurrentWeather = async (userCity) => {
     const res = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${userCity}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${userCity}&aqi=no`
     );
     return await res.json();
   };
